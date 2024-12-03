@@ -12,11 +12,19 @@ class PatientXMLView(ListAPIView):
     def get_queryset(self):
         query_set = PatientDemographics.objects.all()
         patient_id = self.request.query_params.get('patient_id')
+        first_name = self.request.query_params.get('first_name')
+        last_name = self.request.query_params.get('last_name')
         start_date = self.request.query_params.get('start_date')
         end_date = self.request.query_params.get('end_date')
 
         if patient_id:
             query_set = query_set.filter(patient_id=patient_id)
+
+        if first_name:
+            query_set = query_set.filter(first_name__iexact=first_name)
+        
+        if last_name:
+            query_set = query_set.filter(last_name__iexact=last_name)
         
         if start_date and end_date:
             query_set = query_set.filter(
