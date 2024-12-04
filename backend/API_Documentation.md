@@ -14,13 +14,9 @@ The base API url is http://localhost:{portnumber}/api/
 | Name                 | Data Type  | Required/Optional | Description                         |
 |----------------------|------------|-------------------|-------------------------------------|
 | patient_id           | string     | Optional          | The patient's id                    |
-|----------------------|------------|-------------------|-------------------------------------|
 | first_name           | string     | Optional          | The patient's first name            |
-|----------------------|------------|-------------------|-------------------------------------|
 | last_name            | string     | Optional          | The patient's last name             |
-|----------------------|------------|-------------------|-------------------------------------|
 | start_date           | Date       | Optional          | Query begin date (inclusive)        |
-|----------------------|------------|-------------------|-------------------------------------|
 | end_date             | Date       | Optional          | Query end date (inclusive)          |
 
 ### Responses:
