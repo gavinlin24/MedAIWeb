@@ -1,0 +1,4 @@
+django
+djangorestframework
+djangorestframework-xml
+django-environ
